@@ -1,0 +1,160 @@
+<!-- ============================================================
+     COURSE OVERVIEW TEMPLATE (GENERIC)
+     For: Vasto LMS Implementations
+     Author: Matthew Willis / GitHub repository version
+     Notes:
+       - Replace all {{PLACEHOLDER}} fields with course content.
+       - Compatible with Bootstrap 5 (ships with Vasto).
+       - Inline CSS prevents branding conflicts.
+     ============================================================ -->
+
+<section style="font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color:#1e293b; line-height:1.7;">
+
+  <!-- ============================
+       HERO IMAGE
+       ============================ -->
+  <div style="position:relative; width:100%; overflow:hidden; border-radius:12px;">
+    <img src="{{HERO_IMAGE_URL}}"
+         alt="{{COURSE_NAME}} hero image"
+         style="width:100%; height:auto; object-fit:cover; display:block;">
+
+    <div style="position:absolute; inset:0; background:rgba(30,41,59,0.35);"></div>
+
+    <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); text-align:center; padding:0 16px;">
+      <h1 style="font-size:2.8rem; font-weight:700; color:#fff; margin:0;">
+        {{COURSE_NAME}}
+      </h1>
+      <p style="font-size:1.3rem; color:#e0f7fa; margin-top:10px;">
+        {{COURSE_TAGLINE}}
+      </p>
+    </div>
+  </div>
+
+  <!-- ============================
+       INTRODUCTION
+       ============================ -->
+  <div style="max-width:900px; margin:32px auto;">
+    <p style="font-size:1.25rem; margin-bottom:20px; text-align:center;">
+      {{COURSE_INTRO_PARAGRAPH_1}}
+    </p>
+    <p style="font-size:1.25rem; text-align:center;">
+      {{COURSE_INTRO_PARAGRAPH_2}}
+    </p>
+  </div>
+
+  <!-- ============================
+       WHAT YOU WILL LEARN (TILES)
+       ============================ -->
+  <div style="max-width:900px; margin:0 auto 48px;">
+    <h2 style="font-size:1.8rem; font-weight:700; color:#00796B; margin-bottom:16px;">
+      What You Will Learn
+    </h2>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:24px;">
+
+      <!-- TILE TEMPLATE (duplicate as needed) -->
+      <div style="background:#f1f5f9; border-radius:10px; padding:24px;">
+        <h3 style="font-size:1.3rem; font-weight:600; color:#004D40; margin-bottom:10px;">
+          {{LEARNING_TILE_TITLE}}
+        </h3>
+        <p style="font-size:1.1rem;">{{LEARNING_TILE_DESCRIPTION}}</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================
+       COURSE STRUCTURE (MODULES)
+       ============================ -->
+  <div style="max-width:900px; margin:0 auto 48px;">
+    <h2 style="font-size:1.8rem; font-weight:700; color:#00796B; margin-bottom:16px;">
+      Course Structure
+    </h2>
+
+    <div class="accordion" id="courseStructure">
+
+      <!-- MODULE TEMPLATE (duplicate for each module) -->
+      <div class="accordion-item" style="border-radius:10px; border:1px solid #e0e0e0; margin-bottom:16px;">
+        <h2 class="accordion-header" id="module{{MODULE_NUMBER}}">
+          <button class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseModule{{MODULE_NUMBER}}"
+                  aria-expanded="false"
+                  aria-controls="collapseModule{{MODULE_NUMBER}}"
+                  style="background:#fff; color:#004D40; font-weight:600; font-size:1.15rem;">
+            Module {{MODULE_NUMBER}} – {{MODULE_TITLE}}
+          </button>
+        </h2>
+
+        <div id="collapseModule{{MODULE_NUMBER}}"
+             class="accordion-collapse collapse"
+             aria-labelledby="module{{MODULE_NUMBER}}"
+             data-bs-parent="#courseStructure">
+          <div class="accordion-body" style="background:#FAFAFA; font-size:1.1rem;">
+            <!-- Repeatable unit entry -->
+            <strong>{{UNIT_CODE}} ({{CORE_OR_ELECTIVE}}): {{UNIT_TITLE}}</strong><br>
+            {{UNIT_DESCRIPTION}}<br><br>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================
+       ASSESSMENT OVERVIEW
+       ============================ -->
+  <div style="max-width:900px; margin:0 auto 48px;">
+    <h2 style="font-size:1.8rem; font-weight:700; color:#00796B; margin-bottom:16px;">
+      Assessment Overview
+    </h2>
+
+    <ul style="padding-left:24px; font-size:1.15rem; color:#374151;">
+      <li><strong>A1 – Knowledge Questions:</strong> {{A1_DESCRIPTION}}</li>
+      <li><strong>A2 – Practical / Portfolio:</strong> {{A2_DESCRIPTION}}</li>
+      <li><strong>A3 – Observation Checklist:</strong> {{A3_DESCRIPTION}}</li>
+      <li><strong>A4 – Verbal Recording (if applicable):</strong> {{A4_DESCRIPTION}}</li>
+    </ul>
+  </div>
+
+  <!-- ============================
+       WORKPLACE LEARNING (OPTIONAL)
+       ============================ -->
+  <div style="max-width:900px; margin:0 auto 48px;">
+    <h2 style="font-size:1.8rem; font-weight:700; color:#00796B; margin-bottom:16px;">
+      Workplace Learning & Assessment
+    </h2>
+
+    <p style="font-size:1.2rem;">
+      {{WLA_OVERVIEW}}
+    </p>
+
+    <p style="font-size:1.2rem;"><strong>Block 1:</strong> {{WLA_BLOCK_1}}</p>
+    <p style="font-size:1.2rem;"><strong>Block 2:</strong> {{WLA_BLOCK_2}}</p>
+  </div>
+
+  <!-- ============================
+       CTA + FOOTER
+       ============================ -->
+  <div style="background:#e0f2f1; border-radius:10px; padding:48px 20px; text-align:center; margin:0 16px 48px;">
+    <h3 style="font-size:1.6rem; font-weight:700; color:#004D40; margin-bottom:16px;">
+      Ready to Begin Your Journey?
+    </h3>
+    <p style="font-size:1.2rem; margin-bottom:12px;">
+      {{CTA_TEXT}}  
+      Contact us at <a href="mailto:{{CONTACT_EMAIL}}" style="color:#00796B; font-weight:600;">{{CONTACT_EMAIL}}</a>
+      or call <strong>{{PHONE_NUMBER}}</strong>.
+    </p>
+
+    <a href="{{GUIDE_LINK}}"
+       style="display:inline-block; background:#00796B; color:#fff; font-weight:600; padding:12px 24px; border-radius:6px; text-decoration:none; font-size:1rem;">
+       Download Course Guide
+    </a>
+  </div>
+
+  <footer style="text-align:center; font-size:1rem; color:#64748B; margin-bottom:24px;">
+    © {{ORG_NAME}} {{YEAR}} | RTO {{RTO_NUMBER}}
+  </footer>
+
+</section>
