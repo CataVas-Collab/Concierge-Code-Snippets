@@ -1,0 +1,211 @@
+<!-- ================================================================
+     FACE-TO-FACE COURSE OVERVIEW TEMPLATE (GENERIC)
+     For use in Vasto LMS | Bootstrap 5 compatible
+     Author: Matthew Willis | GitHub version
+     Replace all {{PLACEHOLDERS}} to customise per qualification
+     ================================================================ -->
+
+<section style="font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; color:#1e293b; line-height:1.7;">
+
+  <!-- ============================
+       HERO IMAGE
+       ============================ -->
+  <div style="position:relative; width:100%; overflow:hidden; border-radius:12px;">
+    <img src="{{HERO_IMAGE_URL}}"
+         alt="{{COURSE_NAME}} hero image"
+         style="width:100%; height:auto; object-fit:cover; display:block;">
+
+    <div style="position:absolute; inset:0; background:rgba(0,0,0,0.45);"></div>
+
+    <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center; padding:0 16px;">
+      <h1 style="font-size:2.9rem; color:#fff; font-weight:700; margin:0;">
+        {{COURSE_NAME}}
+      </h1>
+      <p style="font-size:1.35rem; color:#dff6ff; margin-top:10px;">
+        {{COURSE_TAGLINE}}
+      </p>
+    </div>
+  </div>
+
+  <!-- ============================
+       DELIVERY MODE PANEL
+       ============================ -->
+  <div style="max-width:900px; margin:32px auto; padding:20px; background:#e8f5e9; border-left:6px solid #2e7d32; border-radius:12px;">
+    <h2 style="font-size:1.6rem; font-weight:700; color:#1b5e20; margin-bottom:8px;">
+      Delivered Face-to-Face
+    </h2>
+    <p style="font-size:1.2rem; margin:0;">
+      This qualification is delivered through structured classroom sessions, supervised practical activities, group work, and hands-on training with your trainer. Attendance and participation are essential to your success.
+    </p>
+  </div>
+
+  <!-- ============================
+       INTRODUCTION
+       ============================ -->
+  <div style="max-width:900px; margin:0 auto 40px;">
+    <p style="font-size:1.25rem; margin-bottom:20px; text-align:center;">
+      {{COURSE_INTRO_PARAGRAPH_1}}
+    </p>
+    <p style="font-size:1.25rem; text-align:center;">
+      {{COURSE_INTRO_PARAGRAPH_2}}
+    </p>
+  </div>
+
+  <!-- ============================
+       WHAT YOU WILL LEARN (TILES)
+       ============================ -->
+  <div style="max-width:900px; margin:0 auto 48px;">
+    <h2 style="font-size:1.8rem; font-weight:700; color:#2e7d32; margin-bottom:16px;">
+      What You Will Learn
+    </h2>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:24px;">
+
+      <!-- TILE TEMPLATE -->
+      <div style="background:#f1f5f9; border-radius:10px; padding:24px;">
+        <h3 style="font-size:1.3rem; font-weight:600; color:#1b5e20; margin-bottom:10px;">
+          {{LEARNING_OUTCOME_TITLE}}
+        </h3>
+        <p style="font-size:1.1rem;">{{LEARNING_OUTCOME_DESCRIPTION}}</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================
+       DELIVERY SCHEDULE / TIMETABLE
+       ============================ -->
+  <div style="max-width:900px; margin:0 auto 48px;">
+    <h2 style="font-size:1.8rem; font-weight:700; color:#2e7d32; margin-bottom:16px;">
+      Course Delivery Schedule
+    </h2>
+
+    <p style="font-size:1.2rem;">
+      This course is delivered on-campus over <strong>{{TOTAL_WEEKS}}</strong> weeks. Your weekly schedule includes:
+    </p>
+
+    <ul style="font-size:1.15rem; padding-left:24px;">
+      <li><strong>{{CLASS_DAYS}}</strong> – classroom-based theory & trainer-led activities</li>
+      <li><strong>{{PRACTICAL_DAYS}}</strong> – practical skills training {{PRACTICAL_LOCATION}}</li>
+      <li><strong>{{SELF_STUDY_HOURS}}</strong> recommended independent study per week</li>
+    </ul>
+
+    <div style="background:#f9fbe7; border-radius:8px; padding:16px; margin-top:12px; font-size:1.1rem;">
+      <strong>Attendance Requirement:</strong> Students must attend at least {{ATTENDANCE_PERCENT}}% of scheduled face-to-face sessions.
+    </div>
+  </div>
+
+  <!-- ============================
+       CLASSROOM EXPECTATIONS
+       ============================ -->
+  <div style="max-width:900px; margin:0 auto 48px;">
+    <h2 style="font-size:1.8rem; font-weight:700; color:#2e7d32; margin-bottom:16px;">
+      Classroom Expectations
+    </h2>
+
+    <ul style="font-size:1.15rem; padding-left:24px;">
+      <li>Arrive on time and be prepared for learning activities</li>
+      <li>Participate in discussions and group work</li>
+      <li>Complete set tasks and supervised practice activities</li>
+      <li>Respect peers, trainers, and the learning environment</li>
+      <li>Follow all safety instructions provided by your trainer</li>
+    </ul>
+  </div>
+
+  <!-- ============================
+       MODULE OVERVIEW (ACCORDION)
+       ============================ -->
+  <div style="max-width:900px; margin:0 auto 48px;">
+    <h2 style="font-size:1.8rem; font-weight:700; color:#2e7d32; margin-bottom:16px;">
+      Course Structure (Modules)
+    </h2>
+
+    <div class="accordion" id="moduleAccordion">
+
+      <!-- MODULE TEMPLATE -->
+      <div class="accordion-item" style="border-radius:10px; border:1px solid #e0e0e0; margin-bottom:16px;">
+        <h2 class="accordion-header" id="module{{MODULE_NUMBER}}">
+          <button class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse{{MODULE_NUMBER}}"
+                  aria-expanded="false"
+                  aria-controls="collapse{{MODULE_NUMBER}}"
+                  style="background:#fff; color:#1b5e20; font-weight:600; font-size:1.15rem;">
+            Module {{MODULE_NUMBER}} – {{MODULE_TITLE}}
+          </button>
+        </h2>
+
+        <div id="collapse{{MODULE_NUMBER}}"
+             class="accordion-collapse collapse"
+             aria-labelledby="module{{MODULE_NUMBER}}"
+             data-bs-parent="#moduleAccordion">
+
+          <div class="accordion-body" style="background:#FAFAFA; font-size:1.1rem;">
+            <strong>{{UNIT_CODE}} – {{UNIT_TITLE}}</strong><br>
+            {{UNIT_DESCRIPTION}}<br><br>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================
+       ASSESSMENT OVERVIEW
+       ============================ -->
+  <div style="max-width:900px; margin:0 auto 48px;">
+    <h2 style="font-size:1.8rem; font-weight:700; color:#2e7d32; margin-bottom:16px;">
+      Assessment Overview
+    </h2>
+
+    <ul style="padding-left:24px; font-size:1.15rem;">
+      <li><strong>Knowledge Assessments:</strong> {{A1_DESCRIPTION}}</li>
+      <li><strong>Practical Demonstrations:</strong> {{A2_DESCRIPTION}}</li>
+      <li><strong>Class Activities & Role-Plays:</strong> {{A3_DESCRIPTION}}</li>
+      <li><strong>Final Skills Assessment:</strong> {{A4_DESCRIPTION}}</li>
+    </ul>
+  </div>
+
+  <!-- ============================
+       VENUE / CAMPUS INFORMATION
+       ============================ -->
+  <div style="max-width:900px; margin:0 auto 48px;">
+    <h2 style="font-size:1.8rem; font-weight:700; color:#2e7d32; margin-bottom:16px;">
+      Campus & Venue Information
+    </h2>
+
+    <p style="font-size:1.2rem; margin-bottom:10px;">
+      <strong>Location:</strong> {{CAMPUS_ADDRESS}}
+    </p>
+
+    <p style="font-size:1.2rem;">
+      <strong>Facilities Include:</strong><br>
+      {{FACILITIES_LIST}}
+    </p>
+  </div>
+
+  <!-- ============================
+       CALL TO ACTION
+       ============================ -->
+  <div style="background:#e0f2f1; border-radius:10px; padding:48px 20px; text-align:center; margin:0 16px 48px;">
+    <h3 style="font-size:1.6rem; font-weight:700; color:#004D40; margin-bottom:16px;">
+      Ready to Begin Your Training?
+    </h3>
+
+    <p style="font-size:1.2rem; margin-bottom:12px;">
+      Contact us at <a href="mailto:{{CONTACT_EMAIL}}" style="color:#00796B; font-weight:600;">{{CONTACT_EMAIL}}</a>  
+      or call <strong>{{PHONE_NUMBER}}</strong>.
+    </p>
+
+    <a href="{{COURSE_GUIDE_LINK}}"
+       style="display:inline-block; background:#00796B; color:#fff; padding:12px 24px; border-radius:6px; text-decoration:none; font-weight:600;">
+      Download Course Guide
+    </a>
+  </div>
+
+  <footer style="text-align:center; font-size:1rem; color:#64748B; margin-bottom:24px;">
+    © {{ORG_NAME}} {{YEAR}} | RTO {{RTO_NUMBER}}
+  </footer>
+
+</section>
