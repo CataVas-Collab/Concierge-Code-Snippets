@@ -1,0 +1,189 @@
+<!-- ===================================================================
+     SHORT COURSE OVERVIEW TEMPLATE (FACE-TO-FACE)
+     For use in Vasto LMS / Bootstrap 5 environments
+     GitHub Version – Replace all {{PLACEHOLDER}} fields as needed
+     =================================================================== -->
+
+<section style="font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; color:#1e293b; line-height:1.65;">
+
+  <!-- ============================
+       HERO IMAGE
+       ============================ -->
+  <div style="position:relative; width:100%; overflow:hidden; border-radius:14px;">
+    <img src="{{HERO_IMAGE_URL}}"
+         alt="{{COURSE_NAME}} hero image"
+         style="width:100%; height:auto; object-fit:cover; display:block;">
+    <div style="position:absolute; inset:0; background:rgba(0,0,0,0.45);"></div>
+
+    <div style="position:absolute; top:50%; left:50%; 
+                transform:translate(-50%,-50%); text-align:center; padding:0 16px;">
+      <h1 style="font-size:2.6rem; font-weight:700; color:#fff; margin:0;">
+        {{COURSE_NAME}}
+      </h1>
+      <p style="font-size:1.25rem; color:#e0f7fa; margin-top:10px;">
+        {{COURSE_TAGLINE}}
+      </p>
+    </div>
+  </div>
+
+
+  <!-- ============================
+       COURSE SNAPSHOT
+       ============================ -->
+  <div style="max-width:900px; margin:32px auto; display:grid; 
+              grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:18px;">
+    
+    <div style="background:#f1f5f9; padding:20px; border-radius:10px;">
+      <h3 style="margin:0 0 6px; font-size:1.1rem; font-weight:600; color:#0f5132;">
+        Duration
+      </h3>
+      <p style="margin:0; font-size:1.1rem;">{{COURSE_DURATION}}</p>
+    </div>
+
+    <div style="background:#f1f5f9; padding:20px; border-radius:10px;">
+      <h3 style="margin:0 0 6px; font-size:1.1rem; font-weight:600; color:#0f5132;">
+        Delivery Mode
+      </h3>
+      <p style="margin:0; font-size:1.1rem;">Face-to-Face Classroom</p>
+    </div>
+
+    <div style="background:#f1f5f9; padding:20px; border-radius:10px;">
+      <h3 style="margin:0 0 6px; font-size:1.1rem; font-weight:600; color:#0f5132;">
+        Location
+      </h3>
+      <p style="margin:0; font-size:1.1rem;">{{COURSE_LOCATION}}</p>
+    </div>
+  </div>
+
+
+  <!-- ============================
+       INTRODUCTION
+       ============================ -->
+  <div style="max-width:900px; margin:0 auto 40px;">
+    <p style="font-size:1.2rem;">
+      {{COURSE_INTRO_PARAGRAPH}}
+    </p>
+  </div>
+
+
+  <!-- ============================
+       WHAT YOU WILL LEARN (TILES)
+       ============================ -->
+  <div style="max-width:900px; margin:0 auto 48px;">
+    <h2 style="font-size:1.8rem; font-weight:700; color:#0f5132; margin-bottom:16px;">
+      What You Will Learn
+    </h2>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px;">
+
+      <!-- TILE TEMPLATE -->
+      <div style="background:#ffffff; border:1px solid #e3e3e3; border-radius:10px; padding:20px;">
+        <h3 style="font-size:1.2rem; font-weight:600; color:#1b5e20; margin-bottom:6px;">
+          {{LEARNING_OUTCOME_TITLE}}
+        </h3>
+        <p style="font-size:1.05rem; margin:0;">{{LEARNING_OUTCOME_DESCRIPTION}}</p>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ============================
+       WHO SHOULD ATTEND
+       ============================ -->
+  <div style="max-width:900px; margin:0 auto 48px;">
+    <h2 style="font-size:1.8rem; font-weight:700; color:#0f5132; margin-bottom:12px;">
+      Who Should Attend?
+    </h2>
+
+    <ul style="font-size:1.15rem; padding-left:22px;">
+      <li>{{ATTENDEE_TYPE_1}}</li>
+      <li>{{ATTENDEE_TYPE_2}}</li>
+      <li>{{ATTENDEE_TYPE_3}}</li>
+      <li>{{ATTENDEE_TYPE_4}}</li>
+    </ul>
+  </div>
+
+
+  <!-- ============================
+       DELIVERY SCHEDULE
+       ============================ -->
+  <div style="max-width:900px; margin:0 auto 48px;">
+    <h2 style="font-size:1.8rem; font-weight:700; color:#0f5132; margin-bottom:12px;">
+      Course Schedule
+    </h2>
+
+    <p style="font-size:1.15rem;">
+      This short course is delivered in person over <strong>{{SCHEDULE_LENGTH}}</strong>. 
+      Typical delivery includes:
+    </p>
+
+    <ul style="padding-left:22px; font-size:1.15rem;">
+      <li><strong>{{DAY_1}}</strong>: {{DAY_1_CONTENT}}</li>
+      <li><strong>{{DAY_2}}</strong>: {{DAY_2_CONTENT}}</li>
+      <li><strong>{{DAY_3}}</strong>: {{DAY_3_CONTENT}}</li>
+    </ul>
+
+    <div style="margin-top:14px; background:#fefae0; padding:16px; border-radius:10px;">
+      <strong>Note:</strong> Attendance is required to receive your certificate of completion.
+    </div>
+  </div>
+
+
+  <!-- ============================
+       OPTIONAL ASSESSMENT OVERVIEW
+       ============================ -->
+  <div style="max-width:900px; margin:0 auto 48px;">
+    <h2 style="font-size:1.8rem; font-weight:700; color:#0f5132; margin-bottom:12px;">
+      Assessment (If Applicable)
+    </h2>
+    
+    <ul style="padding-left:22px; font-size:1.15rem;">
+      <li><strong>Knowledge Check:</strong> Short quiz or worksheet.</li>
+      <li><strong>Practical Demonstration:</strong> Trainer-observed task completion.</li>
+      <li><strong>Participation:</strong> Engagement in class activities.</li>
+    </ul>
+  </div>
+
+
+  <!-- ============================
+       TRAINER INFORMATION
+       ============================ -->
+  <div style="max-width:900px; margin:0 auto 48px; background:#f1f5f9; padding:28px; border-radius:12px;">
+    <h2 style="font-size:1.8rem; font-weight:700; color:#0f5132; margin-bottom:12px;">
+      Your Trainer
+    </h2>
+
+    <p style="font-size:1.15rem;">
+      <strong>{{TRAINER_NAME}}</strong> brings extensive industry experience in {{TRAINER_FIELD}}.  
+      They will guide you through practical activities, demonstrations, and hands-on learning to ensure you develop job-ready skills.
+    </p>
+  </div>
+
+
+  <!-- ============================
+       CALL TO ACTION
+       ============================ -->
+  <div style="background:#e0f2f1; border-radius:10px; padding:48px 20px; text-align:center; margin:0 16px 48px;">
+    <h3 style="font-size:1.6rem; font-weight:700; color:#004D40; margin-bottom:16px;">
+      Ready to Join the Course?
+    </h3>
+
+    <p style="font-size:1.2rem; margin-bottom:14px;">
+      Enrol now or contact us at 
+      <a href="mailto:{{CONTACT_EMAIL}}" style="color:#00796B; font-weight:600;">{{CONTACT_EMAIL}}</a>  
+      or call <strong>{{PHONE_NUMBER}}</strong>.
+    </p>
+
+    <a href="{{ENROL_LINK}}"
+       style="display:inline-block; background:#2e7d32; color:#fff; padding:12px 24px; 
+              border-radius:6px; text-decoration:none; font-weight:600; font-size:1.1rem;">
+      Enrol Now
+    </a>
+  </div>
+
+  <footer style="text-align:center; font-size:1rem; color:#64748B; margin-bottom:20px;">
+    © {{ORG_NAME}} {{YEAR}}
+  </footer>
+
+</section>
