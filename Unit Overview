@@ -1,0 +1,49 @@
+<section style="font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+                color:#1e293b; line-height:1.65; border:1px solid #e2e8f0;
+                border-radius:14px; overflow:hidden;">
+
+  <!-- Header -->
+  <div style="background:linear-gradient(90deg,#3b82f6,#06b6d4); color:#ffffff; padding:16px 20px;">
+    <div style="font-size:12px; text-transform:uppercase; letter-spacing:.08em; opacity:.9;">
+      Unit Overview
+    </div>
+    <h2 style="margin:4px 0 0; font-size:22px; font-weight:700;">
+      {{UNIT_CODE}} {{UNIT_TITLE}}
+    </h2>
+  </div>
+
+  <!-- Body -->
+  <div style="padding:22px;">
+
+    <!-- Summary -->
+    <p style="font-size:1.05rem; margin-top:0;">
+      {{SUMMARY_PARAGRAPH}}
+    </p>
+
+    <!-- Additional Description -->
+    <p style="font-size:1.05rem;">
+      {{DESCRIPTION_PARAGRAPH}}
+    </p>
+
+    <!-- Divider -->
+    <hr style="border:none; border-top:1px solid #e2e8f0; margin:22px 0;">
+
+    <!-- Tags -->
+    <div style="display:flex; flex-wrap:wrap; gap:10px;">
+      <span style="font-size:12px; background:#f1f5f9; color:#334155;
+                   padding:6px 12px; border-radius:999px;">
+        {{TAG_1}}
+      </span>
+      <span style="font-size:12px; background:#f1f5f9; color:#334155;
+                   padding:6px 12px; border-radius:999px;">
+        {{TAG_2}}
+      </span>
+      <span style="font-size:12px; background:#f1f5f9; color:#334155;
+                   padding:6px 12px; border-radius:999px;">
+        {{TAG_3}}
+      </span>
+      <!-- Add more tags as required -->
+    </div>
+
+  </div>
+</section>
